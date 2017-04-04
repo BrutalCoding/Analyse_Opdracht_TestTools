@@ -11,10 +11,16 @@ namespace TestDemo.Test
     [TestFixture]
     public class HelloWorldTest
     {
+        HelloWorld HW;
+        [SetUp]
+        public void Setup()
+        {
+            HW = new HelloWorld();
+        }
+
         [TestCase]
         public void CountHelloWorld()
         {
-            HelloWorld HW = new HelloWorld();
             int response = HW.CountHelloWorld();
             Assert.AreEqual(11, response);
         }
@@ -22,9 +28,17 @@ namespace TestDemo.Test
         [TestCase]
         public void ShowHelloWorld()
         {
-            HelloWorld HW = new HelloWorld();
             string response = HW.ShowHelloWorld();
             Assert.AreEqual("Hello World", response);
         }
+
+        [TestCase]
+        public void LeapCalculator()
+        {
+            Boolean response = HW.LeapCalculator(1994);
+            Assert.AreEqual(false, response);
+        }
+
+
     }
 }
