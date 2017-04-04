@@ -10,6 +10,9 @@ namespace TestDemo
     {
         static void Main(string[] args)
         {
+            Console.WriteLine($"Text: {new HelloWorld().ShowHelloWorld()}");
+            Console.WriteLine($"Amount of characters: {new HelloWorld().CountHelloWorld()}");
+            Console.ReadLine();
         }
     }
 }
